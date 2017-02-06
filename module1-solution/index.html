@@ -20,13 +20,12 @@
              class="form-control">
          </div>
 
-         <span ng-if="result" type="text" >{{result}}</span>
-
+         <span>Empty fields are not considered</span>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkTooMuch()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           <!-- Your message can go here. -->
+           <span ng-if="result" type="text" ng-style="{'color': result.style.color, 'border': result.style.border}" >{{result.message}}</span>
          </div>
    </div>
 
