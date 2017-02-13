@@ -1,5 +1,6 @@
 <h5 ng-repeat="item in foundItems">
-  {{item.name}} {{item.short_name}} {{item.description}} <span><button  class="btn btn-danger"  ng-click="onRemove({index: $index})">Don't want this one</button></span>
+  {{item.name}} {{item.short_name}} {{item.description}} 
+  <button  class="btn btn-danger"  ng-click="onRemove({index: $index})">Don't want this one</button>
 </h5>
 
-<h5 ng-if="foundItems.length === 0" class="text-center loader"></h5>
+<h5 ng-if="foundItems.length === 0" class="loader" ></h5>
