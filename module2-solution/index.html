@@ -40,8 +40,8 @@
         <li ng-repeat="item in ctrl1.toBuyList"> 
        
         Buy {{item.quantity}} {{item.name}}
-        <span class="glyphicon glyphicon-ok" ></span> 
-        <button ng-click="ctrl1.buyItem($index)"> Bought </button>
+        
+        <button ng-click="ctrl1.buyItem($index)"><span class="glyphicon glyphicon-ok" ></span>  Bought </button>
         </li>
      </ul>
      <div class="emptyMessage" ng-if="ctrl1.toBuyList.length === 0">Everything is bought!</div>
