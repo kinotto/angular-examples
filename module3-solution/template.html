@@ -1,0 +1,5 @@
+<div class="row" ng-repeat="item in foundItems">
+  {{item.name}} {{item.short_name}} {{item.description}} <span><button  class="btn btn-danger"  ng-click="onRemove({index: $index})">Don't want this one</button></span>
+</div>
+
+<div ng-if="foundItems.length === 0" class="text-center loader"></div>
