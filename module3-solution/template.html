@@ -1,6 +1,9 @@
-<h5 ng-repeat="item in foundItems">
-  {{item.name}} {{item.short_name}} {{item.description}} 
-  <button  class="btn btn-danger"  ng-click="onRemove({index: $index})">Don't want this one</button>
-</h5>
-
-<h5 ng-if="foundItems.length === 0" class="loader" ></h5>
+<table>
+<tr ng-repeat="item in foundItems">
+  <td>{{item.name}} </td>
+  <td>{{item.short_name}}</td>
+  <td>{{item.description}}</td>
+  <td><button  class="btn btn-danger notshow"  ng-click="onRemove({index: $index})">Don't want this one</button></td>
+</tr>
+</table>
+<h5 ng-if="foundItems.length === 0" >Nothing found</h5>

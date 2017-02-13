@@ -10,9 +10,11 @@
       _this.foundItems.splice(index, 1);
     }
     _this.narrowItDown = function(searchTerm){
-      _this.foundItems ? _this.foundItems.splice(0, _this.foundItems.length) : _this.foundItems = [];
+      _this.loading = true;
+      
         MenuSearchService.getMatchedMenuItems(searchTerm)
         .then(function(foundItems){
+          _this.loading = false;
           _this.foundItems = foundItems;
         })
         .catch(function(err){
