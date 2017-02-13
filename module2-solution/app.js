@@ -23,19 +23,19 @@
   function ShoppingListCheckOffService(){
     var toBuyList = [
       {
-        name: 'cookies',
+        name: 'bags of cookies',
         quantity: 5
       },
       {
-        name: 'chips',
+        name: 'bags of chips',
         quantity: 5
       },
       {
-        name: 'nuts',
+        name: 'bags of nuts',
         quantity: 3
       },
       {
-        name: 'veggies',
+        name: 'bags of veggies',
         quantity: 5
       },
       {
