@@ -32,15 +32,15 @@
       },
       {
         name: 'nuts',
-        quantity: 5
+        quantity: 3
       },
       {
         name: 'veggies',
         quantity: 5
       },
       {
-        name: 'milk',
-        quantity: 5
+        name: 'cheeseburger',
+        quantity: 4
       },
     ];
     var alreadyBoughtList = [];
