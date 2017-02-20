@@ -1,9 +1,11 @@
-<table>
-<tr ng-repeat="item in foundItems">
-  <td>{{item.name}} </td>
-  <td>{{item.short_name}}</td>
-  <td>{{item.description}}</td>
-  <td><button  class="btn btn-danger notshow"  ng-click="onRemove({index: $index})">Don't want this one</button></td>
-</tr>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <tr ng-repeat="item in foundItems">
+      <td>{{item.name}} </td>
+      <td>{{item.short_name}}</td>
+      <td>{{item.description}}</td>
+      <td><button  class="btn btn-danger notshow"  ng-click="onRemove({index: $index})">Don't want this one</button></td>
+    </tr>
+  </table>
+</div>
 <h5 ng-if="foundItems.length === 0" >Nothing found</h5>
