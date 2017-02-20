@@ -26,7 +26,8 @@
 
   MenuSearchService.$inject = ['$http'];
   function MenuSearchService($http){
-    this.getMatchedMenuItems = function(searchTerm){
+    var service = this;
+    service.getMatchedMenuItems = function(searchTerm){
       return $http({
           url: 'https://davids-restaurant.herokuapp.com/menu_items.json'
         }).then(function(res){
@@ -45,7 +46,7 @@
 
   function foundItems(){
     var ddo = {
-      restrict: 'A',
+      restrict: 'E',
       scope: {
         foundItems: '<',
         onRemove: '&'
