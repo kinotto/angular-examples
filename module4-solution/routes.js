@@ -9,7 +9,7 @@
     $stateProvider
      .state('home', {
         url: '/',
-        template: '<h4>Welcome to our Restaurant</h4> <a ui-sref="categories">categories</a>'
+        template: '<h2 class="text-center">Welcome to our Restaurant</h2> <h3 class="text-center"><a ui-sref="categories">categories available</a></h3>'
      })
      .state('categories', {
         url: '/categories',

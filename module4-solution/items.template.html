@@ -1,2 +1,12 @@
-<h4>Items for category - {{$ctrl.categoryName}}</h4>
-<h5 ng-repeat="item in $ctrl.items">{{item.name}}</h5>
+<h2 class="text-center">Items for category - {{$ctrl.categoryName}}</h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered"> 
+    <tr ng-repeat="item in $ctrl.items">
+      <td>{{item.name}}</td> 
+      <td>{{item.short_name}}</td>
+      <td>{{item.description}}</td>
+    </tr>
+  </table>
+</div>
+
