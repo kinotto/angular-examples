@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="table-responsive" ng-if="userInfo.userData">
+    <h3>User information</h3><br>
+    <table class="table table-bordered">
+        <tr>
+          <td>Name</td>
+          <td> {{userInfo.userData.firstName}}</td>
+        </tr>
+        <tr>
+          <td>Last name</td>
+          <td>{{userInfo.userData.lastName}}</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td> {{userInfo.userData.email}}</td>
+        </tr>
+        <tr>
+          <td>Phone number</td>
+          <td>{{userInfo.userData.phoneNumber}}</td>
+        </tr>
+        <tr>
+          <td>Menu item</td>
+          <td><menu-item menu-item="userInfo.userData.menuItem"></menu-item></td>
+        </tr>
+    </table>
+  </div>
+
+  <div class="row" ng-if="!userInfo.userData">
+    <h3>Not signed up yet, <a ui-sref="public.signup" href="">Sign up now!</a></h3>
+  </div>
+</div>
