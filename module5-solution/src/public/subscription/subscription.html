@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-        <h3>Subscribe to our newsletter</h3>
-        <form class="form-horizontal" name="subscriptionForm" novalidate>
+        <h3 class="text-center">Subscribe to our newsletter</h3>
+        <div class="">
+        <form class="form-horizontal " name="subscriptionForm" novalidate>
 
           <div class="form-group" ng-class="{'has-warning' : subscriptionForm.firstName.$touched && subscriptionForm.firstName.$error.required}">
             <label class="control-label col-sm-2">first name:</label>
-            <div class="col-sm-4">
+            <div class="col-sm-8">
               <input type="text" class="form-control" name="firstName" ng-model="signup.user.firstName" required>
               <div class="help-block" ng-show="subscriptionForm.firstName.$touched && subscriptionForm.firstName.$error.required">
                 insert a name
@@ -14,44 +15,47 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="col-sm-2">last name:</label>
-            <div class="col-sm-4">
+          <div class="form-group" ng-class="{'has-warning' : subscriptionForm.lastName.$touched && subscriptionForm.lastName.$error.required}">
+            <label class="control-label col-sm-2">last name:</label>
+            <div class="col-sm-8">
               <input type="text" class="form-control" name="lastName" ng-model="signup.user.lastName" required>
-              <div  ng-show="subscriptionForm.lastName.$touched && subscriptionForm.lastName.$error.required">
+              <div  class="help-block" ng-show="subscriptionForm.lastName.$touched && subscriptionForm.lastName.$error.required">
                 insert a last name
               </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="col-sm-2">email: </label>
-            <div class="col-sm-4">
+          <div class="form-group" ng-class="{'has-warning' : subscriptionForm.emailField.$touched && (subscriptionForm.emailField.$error.email ||
+                subscriptionForm.emailField.$error.required)}"">
+            <label class="control-label col-sm-2">email: </label>
+            <div class="col-sm-8">
               <input type="email" class="form-control" name="emailField" ng-model="signup.user.email" required>
-              <div  ng-show="subscriptionForm.emailField.$touched && (subscriptionForm.emailField.$error.email ||
+              <div class="help-block" ng-show="subscriptionForm.emailField.$touched && (subscriptionForm.emailField.$error.email ||
                 subscriptionForm.emailField.$error.required)">
                 insert a valid email
               </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="col-sm-2">phone number:</label>
-            <div class="col-sm-4">
+          <div class="form-group" ng-class="{'has-warning' : subscriptionForm.phoneNumber.$touched && (subscriptionForm.phoneNumber.$error.pattern ||
+                subscriptionForm.phoneNumber.$error.required)}">
+            <label class="control-label col-sm-2">phone number:</label>
+            <div class="col-sm-8">
               <input type="tel" pattern="^\d{4,}$" class="form-control" name="phoneNumber"  ng-model="signup.user.phoneNumber" required>
-              <div  ng-show="subscriptionForm.phoneNumber.$touched && (subscriptionForm.phoneNumber.$error.pattern ||
+              <div class="help-block" ng-show="subscriptionForm.phoneNumber.$touched && (subscriptionForm.phoneNumber.$error.pattern ||
                 subscriptionForm.phoneNumber.$error.required)">
                 insert a valid phone number
               </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="col-sm-2">menu number: </label>
-            <div class="col-sm-4">
+          <div class="form-group" ng-class="{'has-warning' : subscriptionForm.menuNumber.$touched && (subscriptionForm.menuNumber.$invalid ||
+                subscriptionForm.menuNumber.$error.required)}">
+            <label class="control-label col-sm-2">menu number: </label>
+            <div class="col-sm-8">
               <input type="text" class="form-control" name="menuNumber" ng-model="signup.user.menuNumber" 
                 ng-blur="signup.checkMenuItem(signup.user.menuNumber)" required>
-              <div ng-show="subscriptionForm.menuNumber.$touched && (subscriptionForm.menuNumber.$invalid ||
+              <div class="help-block" ng-show="subscriptionForm.menuNumber.$touched && (subscriptionForm.menuNumber.$invalid ||
                 subscriptionForm.menuNumber.$error.required)">
                 No such menu number exists
               </div>
@@ -59,8 +63,8 @@
           </div>
 
 
-          <div class="form-group">
-            <div class="col-sm-6">
+          <div class="form-group" >
+            <div class="control-label col-sm-8 col-sm-offset-2">
               <input type="submit" style="width: 100%" class="btn btn-primary" value="send" ng-disabled="subscriptionForm.$invalid" 
               ng-click="signup.saveUserData(signup.user)">
             </div>
@@ -72,7 +76,7 @@
             </div>
           </div>
 
-        </form>
+        </form></div>
     </div>
   </div>
     
