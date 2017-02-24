@@ -6,13 +6,12 @@ subscriptionCtrl.$inject = ['subscriptionService', '$scope', '$q'];
 function subscriptionCtrl(subscriptionService, $scope, $q){
   var _this = this;
   var menuItem;
-
   _this.checkMenuItem = function(menuNumber){
     var deferred = $q.defer();
     _this.infoSaved = false;
     var promise =  subscriptionService.getMenuItemsByShortName(menuNumber);
     promise.then(function(result){
-      var menuItem = result.data;
+      menuItem = result.data;
       deferred.resolve();
     })
     .catch(function(err){

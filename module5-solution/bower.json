@@ -1,0 +1,14 @@
+{
+  "name": "module5-solution",
+  "homepage": "https://github.com/kinotto/angular-examples",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

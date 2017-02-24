@@ -7,6 +7,7 @@ function subscriptionService($http, MyApiPath){
   var userData;
   this.getMenuItemsByShortName = function(short_name){
     return $http({
+      method: 'GET',
       url: MyApiPath + '/menu_items/'+short_name+'.json'
     });
   }
