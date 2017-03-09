@@ -1,14 +1,14 @@
 angular.module('public')
 .service('subscriptionService', subscriptionService);
 
-subscriptionService.$inject = ['$http', 'MyApiPath'];
+subscriptionService.$inject = ['$http', 'ApiPath'];
 
-function subscriptionService($http, MyApiPath){
+function subscriptionService($http, ApiPath){
   var userData;
   this.getMenuItemsByShortName = function(short_name){
     return $http({
       method: 'GET',
-      url: MyApiPath + '/menu_items/'+short_name+'.json'
+      url: ApiPath + '/menu_items/'+short_name+'.json'
     });
   }
 

@@ -17,7 +17,6 @@ function subscriptionCtrl(subscriptionService, $scope, $q){
     .catch(function(err){
       $scope.subscriptionForm.menuNumber.$invalid = true;
       $scope.subscriptionForm.$invalid = true;
-      console.log(err);
       deferred.reject();
     })
 
